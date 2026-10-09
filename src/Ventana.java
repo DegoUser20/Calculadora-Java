@@ -34,9 +34,17 @@ public class Ventana {
                             "C", "0", ".","+",
                             "=", "","",""};
 
+        //Objeto para llamar la lógica de los botones
+        Logica logica = new Logica();
+
         for (String texto : textos) {
             JButton boton = new JButton(texto);
             boton.setFont(fuenteBotones);
+
+            //Acción para que el boton escuche el clic
+            boton.addActionListener(e -> {
+                visor.setText(logica.pulsarNumero(texto));
+            });
             panelBotones.add(boton);
         }
 

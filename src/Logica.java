@@ -4,7 +4,7 @@ public class Logica {
     private String numeroActual = "";
 
     //Método que se llama cuando se presiona un botón
-    public String botonPulsado(String digito) {
+    public String pulsarNumero(String digito) {
         numeroActual += digito;
         return numeroActual;
     }
