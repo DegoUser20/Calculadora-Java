@@ -25,13 +25,14 @@ public class Ventana {
         // =============================
         // BOTONES
         // =============================
-        JPanel panelBotones = new JPanel(new GridLayout(4, 3, 10, 10));
+        JPanel panelBotones = new JPanel(new GridLayout(5, 4, 10, 10));
         Font fuenteBotones = new Font("Arial", Font.BOLD, 30);
 
-        String[] textos = {"7", "8", "9",
-                "4", "5", "6",
-                "1", "2", "3",
-                "C", "0", "="};
+        String[] textos = {"7", "8", "9", "+",
+                            "4", "5", "6","-",
+                            "1", "2", "3","*",
+                            "C", "0", ".","+",
+                            "=", "","",""};
 
         for (String texto : textos) {
             JButton boton = new JButton(texto);
