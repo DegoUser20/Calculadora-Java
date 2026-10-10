@@ -31,7 +31,7 @@ public class Ventana {
         String[] textos = {"7", "8", "9", "+",
                             "4", "5", "6","-",
                             "1", "2", "3","*",
-                            "C", "0", ".","+",
+                            "C", "0", ".","/",
                             "=", "","",""};
 
         //Objeto para llamar la lógica de los botones
@@ -43,7 +43,15 @@ public class Ventana {
 
             //Acción para que el boton escuche el clic
             boton.addActionListener(e -> {
-                visor.setText(logica.pulsarNumero(texto));
+                if(texto.equals("+") || texto.equals("-") ||texto.equals("*") || texto.equals("/")) {
+                    visor.setText(logica.pulsarOperador(texto));
+                } else if(texto.equals("C")) {
+                    visor.setText("0");
+                } else if(texto.equals("=")) {
+                    //Aqui ira el metodo calcular más adelante
+                } else {
+                    visor.setText(logica.pulsarNumero(texto));
+                }
             });
             panelBotones.add(boton);
         }

@@ -2,10 +2,31 @@
 public class Logica {
     //Metodo para guardar los números que se pulsan
     private String numeroActual = "";
+    private double primerNumero = 0;
+    private String operador = "";
 
-    //Método que se llama cuando se presiona un botón
-    public String pulsarNumero(String digito) {
+    //Metodo que se llama cuando se presiona un número
+    public String pulsarNumero(String digito){
         numeroActual += digito;
         return numeroActual;
+    }
+
+    //Método que se llama cuando se presiona un botón de operador
+    public String pulsarOperador(String op) {
+        //1. Convertir numeroActual (texto) a un número y guardarlo en primer número
+        primerNumero = Double.parseDouble(numeroActual);
+        //2. Guardar op en operador
+        operador = op;
+        //3. Vaciar numeroActual para poder escribir el segundo número
+        numeroActual = "";
+        return op;
+    }
+
+    //Método para calcular los números
+    public String calcular() {
+        //String comando = e.getActionCommand();
+
+
+        return "";
     }
 }
