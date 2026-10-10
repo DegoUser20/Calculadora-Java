@@ -31,6 +31,17 @@ public class Logica {
             case "+":
                 resultado = primerNumero + segundoNumero;
                 break;
+            case "-":
+                resultado = primerNumero - segundoNumero;
+                break;
+
+            case "*":
+                resultado = primerNumero * segundoNumero;
+                break;
+
+            case "/":
+                resultado = primerNumero / segundoNumero;
+                break;
         }
         return String.valueOf(resultado);
     }
