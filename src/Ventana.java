@@ -46,7 +46,7 @@ public class Ventana {
                 if(texto.equals("+") || texto.equals("-") ||texto.equals("*") || texto.equals("/")) {
                     visor.setText(logica.pulsarOperador(texto));
                 } else if(texto.equals("C")) {
-                    visor.setText("0");
+                    visor.setText(logica.limpiar());
                 } else if(texto.equals("=")) {
                     //Aqui ira el metodo calcular más adelante
                     visor.setText(logica.calcular());

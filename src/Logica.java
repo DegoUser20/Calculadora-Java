@@ -45,4 +45,12 @@ public class Logica {
         }
         return String.valueOf(resultado);
     }
+
+    //Método para borrar todo con el boton C
+    public String limpiar() {
+        numeroActual = "";
+        primerNumero = 0;
+        operador = "";
+        return "0";
+    }
 }
