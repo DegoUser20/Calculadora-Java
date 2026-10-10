@@ -24,9 +24,14 @@ public class Logica {
 
     //Método para calcular los números
     public String calcular() {
-        //String comando = e.getActionCommand();
+        double segundoNumero = Double.parseDouble(numeroActual);
+        double resultado = 0;
 
-
-        return "";
+        switch (operador) {
+            case "+":
+                resultado = primerNumero + segundoNumero;
+                break;
+        }
+        return String.valueOf(resultado);
     }
 }

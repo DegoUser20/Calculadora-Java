@@ -49,6 +49,7 @@ public class Ventana {
                     visor.setText("0");
                 } else if(texto.equals("=")) {
                     //Aqui ira el metodo calcular más adelante
+                    visor.setText(logica.calcular());
                 } else {
                     visor.setText(logica.pulsarNumero(texto));
                 }
