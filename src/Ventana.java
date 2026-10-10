@@ -1,7 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
+import java.text.DecimalFormat;
 
 public class Ventana {
+
+    //Objeto para llamar la lógica de los botones
+    Logica logica = new Logica();
 
     //Creamos un constructor para inicializar en MAIN
     public Ventana() {
@@ -34,8 +38,7 @@ public class Ventana {
                             "C", "0", ".","/",
                             "=", "","",""};
 
-        //Objeto para llamar la lógica de los botones
-        Logica logica = new Logica();
+
 
         for (String texto : textos) {
             JButton boton = new JButton(texto);
